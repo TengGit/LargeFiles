@@ -4,7 +4,7 @@
 
 '''MIT License
 
-Copyright (c) 2020 Teng K. J.
+Copyright (c) 2021 Teng K. J.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -40,13 +40,13 @@ next_report_num = 0
 scanned = 0
 
 def format_size(size):
-	''' Add appropriate unit to represent a size.
-	
-	format_size(1) -> "1B"
-	format_size(1024) -> "1KiB"
-	format_size(1<<100) -> "1.049e+06YiB"
-	etc.
-	'''
+    ''' Add appropriate unit to represent a size.
+    
+    format_size(1) -> "1B"
+    format_size(1024) -> "1KiB"
+    format_size(1<<100) -> "1.049e+06YiB"
+    etc.
+    '''
     for unit in 'B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB':
         if size < 1024:
             return '{:.4g}{}'.format(size, unit)
